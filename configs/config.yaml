@@ -1,0 +1,24 @@
+model:
+  name: "FaceRecognitionModel"
+  type: "InceptionResNetV1"
+  input_size: [160, 160]
+  pretrained: true
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  optimizer: "Adam"
+  loss_function: "TripletMarginLoss"
+
+data:
+  raw_images_path: "data/raw"
+  processed_images_path: "data/processed"
+
+output:
+  model_save_path: "models/face_recognition_model.pth"
+
+webcam:
+  width: 640
+  height: 480
+  fps: 30
