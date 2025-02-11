@@ -7,19 +7,21 @@ This project implements a personalized face recognition system optimized for Jet
 ```
 face-recognition-jetson
 ├── src
-│   ├── main.py          # Entry point for the application
-│   ├── train.py         # Logic for training the face recognition model
-│   ├── detect.py        # Real-time face detection and recognition
-│   └── utils.py         # Utility functions for image processing
+│   ├── main.py                     # Entry point for the application
+│   ├── train.py                    # Script for training the face recognition model
+│   ├── detect.py                   # Real-time face detection and recognition
+│   └── utils.py                    # Utility functions for image processing
 ├── data
-│   ├── raw              # Directory for storing raw training images
-│   └── processed        # Directory for storing processed images
+│   ├── raw                         # Directory for storing raw training images (positive samples)
+│   ├── processed                   # Directory for storing processed images
+│   └── negative                    # Directory for storing negative images (images of other people)
 ├── models
-│   └── face_recognition_model.pth  # Trained face recognition model
+│   └── face_recognition_model.pth  # Trained SVC model saved via joblib
 ├── configs
-│   └── config.yaml      # Configuration settings for the project
-├── requirements.txt      # Required Python packages
-└── README.md            # Project documentation
+│   └── config.yaml                 # Configuration settings for the project
+├── LICENSE.txt                     # License file for the project
+├── requirements.txt                # List of Python package dependencies
+└── README.md                       # Project documentation
 ```
 
 ## Setup Instructions
