@@ -69,6 +69,10 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 Updated README Instructions
 
+git clone <repository-url>
+cd face-recognition-jetson
+git checkout new-feature
+
 Prepare your Jetson Nano
 sudo apt-get update && sudo apt-get upgrade
 
