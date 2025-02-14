@@ -7,7 +7,7 @@ from facenet_pytorch import MTCNN, InceptionResnetV1
 from PIL import Image
 from sklearn.preprocessing import Normalizer
 from sklearn.svm import SVC
-import joblib
+import pickle  # Use pickle instead of joblib
 
 def load_images_from_folders(positive_folder, negative_folder):
     images = []
@@ -50,8 +50,10 @@ def train_model(images, labels):
     clf = SVC(kernel='linear', probability=True)
     clf.fit(embeddings, valid_labels)
 
-    # Save the model for later use
-    joblib.dump(clf, 'models/face_recognition_model.pth')
+    # Save the classifier and its classes using pickle
+    model_data = {'clf': clf, 'classes': clf.classes_}
+    with open('models/face_recognition_model.pkl', 'wb') as f:
+        pickle.dump(model_data, f)
 
 def main():
     positive_folder = 'data/raw'
