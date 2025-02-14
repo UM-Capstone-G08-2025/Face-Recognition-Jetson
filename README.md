@@ -68,11 +68,11 @@ This project utilizes the MTCNN and InceptionResNetV1 models for face detection 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Updated README Instructions
-```bash
+   ```bash
    git clone <repository-url>
    cd face-recognition-jetson
    git checkout new-feature
-   ```
+      ```
 
 
 Prepare your Jetson Nano
