@@ -68,10 +68,12 @@ This project utilizes the MTCNN and InceptionResNetV1 models for face detection 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 Updated README Instructions
+```bash
+   git clone <repository-url>
+   cd face-recognition-jetson
+   git checkout new-feature
+   ```
 
-git clone <repository-url>
-cd face-recognition-jetson
-git checkout new-feature
 
 Prepare your Jetson Nano
 sudo apt-get update && sudo apt-get upgrade
@@ -82,20 +84,29 @@ Install PyTorch and TorchVision
 
 Because the Jetson Nano (Jetpack 4.6, Ubuntu 18.04) requires ARM/CUDA–compatible versions, follow NVIDIA’s instructions. For example:
 # Remove any previous torch installations
-sudo apt-get remove python3-torch
+   ```bash
+   sudo apt-get remove python3-torch
+   ```
+
 
 # Install torch and torchvision (check NVIDIA’s official forum posts or GitHub for the current wheel URLs)
 # Example command (wheel URL may vary):
-sudo apt-get install libopenblas-base libopenmpi-dev
-pip3 install https://developer.download.nvidia.com/compute/redist/jp/v46/torch-1.10.0%2Bnv20.12-cp38-cp38-linux_aarch64.whl
-pip3 install https://developer.download.nvidia.com/compute/redist/jp/v46/torchvision-0.11.1%2Bnv20.12-cp38-cp38-linux_aarch64.whl
+   ```bash
+   sudo apt-get install libopenblas-base libopenmpi-dev
+   pip3 install https://developer.download.nvidia.com/compute/redist/jp/v46/torch-1.10.0%2Bnv20.12-cp38-cp38-linux_aarch64.whl
+   pip3 install https://developer.download.nvidia.com/compute/redist/jp/v46/torchvision-0.11.1%2Bnv20.12-cp38-cp38-linux_aarch64.whl
+   ```
+
 
 Make sure to verify the proper URLs for your Jetpack 4.6 installation from NVIDIA’s official resources.
 
 Install remaining dependencies
 
 Navigate to the project directory and run:
-pip3 install -r requirements.txt
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
 
 Download / Transfer the pretrained model
 
@@ -104,6 +115,9 @@ Ensure that the pretrained classifier file face_recognition_model.pkl (which you
 Run Detection
 
 To start the real‑time face detection, simply run:
-python3 src/detect.py
+   ```bash
+   python3 src/detect.py
+   ```
+
 
 This will open your webcam and begin detection as implemented in detect.py.
