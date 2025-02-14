@@ -72,7 +72,7 @@ Updated README Instructions
    git clone <repository-url>
    cd face-recognition-jetson
    git checkout new-feature
-      ```
+   ```
 
 
 Prepare your Jetson Nano
